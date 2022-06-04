@@ -1,0 +1,133 @@
+{
+    "get_book_list": {
+        "_links": {
+            "self": {
+                "href": "http://localhost:1201/books/"
+            }
+        },
+        "total": 498,
+        "_embedded": {
+            "books": [
+                {
+                    "_links": {
+                        "self": {
+                            "href": "http://localhost:1201/books/001"
+                        }
+                    },
+                    "title": "Book1",
+                    "price": "10",
+                    "description": "Matthew Weier O'PhinneyMatthew Weier O'Phinney",
+                    "Catagory": "History"
+                },
+                {
+                    "_links": {
+                        "self": {
+                            "href": "http://localhost:1201/books/002"
+                        }
+                    },
+                    "title": "Book2",
+                    "price": "25",
+                    "description": "Matthew Weier O'PhinneyMatthew Weier O'Phinney",
+                    "Catagory": "Economics"
+                },
+                {
+                    "_links": {
+                        "self": {
+                            "href": "http://localhost:1201/books/003"
+                        }
+                    },
+                    "title": "Book3",
+                    "price": "43",
+                    "description": "Matthew Weier O'PhinneyMatthew Weier O'Phinney",
+                    "Catagory": "Polatics"
+                }
+            ]
+        }
+    },
+    "get_book": {
+        "_links": {
+            "self": {
+                "href": "http://localhost:1201/books/003"
+            }
+        },
+        "title": "Book3",
+        "price": "43",
+        "description": "Matthew Weier O'PhinneyMatthew Weier O'Phinney"
+    },
+    "get_basket": {
+        "_links": {
+            "self": {
+                "href": "http://localhost:1201/basket/001"
+            }
+        },
+        "basket_id": "001",
+        "basket_price": "40",
+        "count": 2,
+        "_embedded": {
+            "books": [
+                {
+                    "_links": {
+                        "self": {
+                            "href": "http://localhost:1201/books/001"
+                        }
+                    },
+                    "title": "Book1",
+                    "price": "10",
+                    "description": "Matthew Weier O'PhinneyMatthew Weier O'Phinney",
+                    "Catagory": "History"
+                },
+                {
+                    "_links": {
+                        "self": {
+                            "href": "http://localhost:1201/books/002"
+                        }
+                    },
+                    "title": "Book2",
+                    "price": "25",
+                    "description": "Matthew Weier O'PhinneyMatthew Weier O'Phinney",
+                    "Catagory": "Economics"
+                }
+            ]
+        }
+    },
+    "add_to_basket": {
+        "_links": {
+            "self": {
+                "href": "http://localhost:1201/basket/001"
+            }
+        },
+        "basket_id": "001",
+        "basket_price": "20",
+        "count": "1"
+    },
+    "update_basket": {
+        "_links": {
+            "self": {
+                "href": "http://localhost:1201/basket/001"
+            }
+        },
+        "basket_id": "001",
+        "basket_price": "30",
+        "count": "2"
+    },
+    "delete_basket_items": {
+        "_links": {
+            "self": {
+                "href": "http://localhost:1201/basket/001"
+            }
+        },
+        "basket_id": "001",
+        "basket_price": "30",
+        "count": "2"
+    },
+    "place_order": {
+        "_links": {
+            "self": {
+                "href": "http://localhost:1201/orders/001"
+            }
+        },
+        "order_id": "001",
+        "user_name": "name",
+        "user_address": "address"
+    }
+}
