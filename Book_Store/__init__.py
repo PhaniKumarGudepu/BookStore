@@ -1,3 +1,4 @@
+from re import T
 from flask import Flask                                        
 ######                                        
 # Remove these line of code when you no longer require a dummy response                                        
@@ -9,8 +10,11 @@ with open(DUMMY_RESPONSE_FILE, 'r') as fi:
 ######                             
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import sessionmaker
 
-
-engine = create_engine('sqlite:////Users/phanigudepu/projects/BookStore/book_store.db', echo=True)
+#Sqlalchamy - intitalizations
+engine = create_engine('sqlite:////Users/phanigudepu/projects/BookStore/book_store.db', echo=True,future=True)
 Base = declarative_base()
+session_factory = sessionmaker(bind=engine, future = True)
+#flask - inializations
 app = Flask('__name__')
